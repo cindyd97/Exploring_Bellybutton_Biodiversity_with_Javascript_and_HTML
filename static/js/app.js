@@ -16,12 +16,11 @@ function buildMetadata(sample) {
     panel.html("");
     // Inside a loop, you will need to use d3 to append new
     // tags for each key-value in the filtered metadata.
-    const entries = Object.entries(result);
-    for (let i = 0; i < entries.length; i++){
-      const [key, value] = entries[i];
-      panel.append('h6').text(`${key}: ${value}`);
+    
+    for ( x in result){
+      panel.append('h6').text(`${x}: ${result[x]}`)
     }
-  });
+});
 }
 
 // function to build both charts
